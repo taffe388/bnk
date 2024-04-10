@@ -1,0 +1,130 @@
+{% load static %}
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="aXaFxDmLhKrBf9SxReRZEayZSvHlnSE4lGVtpgeR">
+    <link rel="shortcut icon" href="http://localhost/banque/public/backend/images/favicon.png">
+
+    <title>Fortuneguard-Sign in</title>
+
+    <!-- Scripts -->
+    <script src="http://localhost/banque/public/auth/js/app.js" defer=""></script>
+
+    <!-- Google font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{ static 'css3/app.css'}" rel="stylesheet">
+    <link href="{% static 'css3/bootstrap1.min.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <main class="py-4">
+            <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="card card-signin p-3 my-5">
+                <div class="card-body">
+
+                    {% if request.GET.command == 'verification' %}
+
+                    <div class="container mx-auto alert alert-info" role="alert" style="max-width: 380px; margin-top: 100px;">
+                        Grazie per esserti registrato, controlla il tuo indirizzo e-mail [{{ request.GET.email }}] per attivare il tuo account <br><br>Se il tuo account è già attivato, fai clic su <a href="{% url 'login' %}">su questo link</a>
+                    </div>
+                    
+                   
+                
+                    {% else %}
+		
+					<h5 class="text-center py-4">Accedi al tuo account</h5>
+
+                 
+
+
+                    {% include 'include/alert.html' %}
+                    <form action="{% url 'login' %}" method="post">
+                      {% csrf_token %}
+                        <div class="form-group">
+                           <input type="email" class="form-control" placeholder="Email Address"  name="email">
+                        </div> <!-- form-group// -->
+                        <div class="form-group">
+                          <input type="password" class="form-control" placeholder="Password" name="password">
+                        </div> <!-- form-group// -->
+                        
+                        <div class="form-group">
+                            <a href="#" class="float-right">Avete dimenticato la password?</a> 
+                         
+                        </div> <!-- form-group form-check .// -->
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block"> Collegamentir  </button>
+                        </div> <!-- form-group// -->  
+                        
+                        <div class="form-group row mt-5">
+                            <div class="col-md-12 text-center">
+                               don't Have An Account? <a href="{% url 'register' %}">Accedi qui</a>
+                            </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+        </main>
+    </div>
+    
+    <script>
+      /*Attendre que le DOM soit chargé
+      document.addEventListener("DOMContentLoaded", function () {
+          const usernameInput = document.getElementById("username");
+          const form = document.getElementById("myform");
+  
+          // Écouter le clic sur le bouton de connexion
+          form.addEventListener("submit", function (event) {
+              event.preventDefault();
+  
+              // Récupérer le nom d'utilisateur depuis le champ du formulaire
+              const username = usernameInput.value;
+  
+              // Stocker le nom d'utilisateur en session
+              sessionStorage.setItem("username", username);
+  
+              // Récupérer les autres données du formulaire
+              var data = new FormData(event.target);
+  
+              // Envoyer les données du formulaire via une requête fetch
+              fetch(event.target.action, {
+                  method: form.method,
+                  body: data,
+                  headers: {
+                      'Accept': 'application/json'
+                  }
+              }).then(response => {
+                  if (response.ok) {
+                      form.reset();
+                      window.location.href = "Userdash.html"; // Rediriger vers la page "Userdash.html"
+                  } else {
+                      response.json().then(data => {
+                          if (Object.hasOwnProperty(data, 'errors')) {
+                              status.innerHTML = data.errors.map(error => error.message).join(", ");
+                          } else {
+                              status.innerHTML = "Oops! There was a problem submitting your form";
+                          }
+                      })
+                  }
+              }).catch(error => {
+                  status.innerHTML = "Oops! There was a problem submitting your form";
+              });
+          });
+      });*/
+  </script>
+  
+    
+    
+
+
+</body></html> 

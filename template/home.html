@@ -1,0 +1,351 @@
+{% extends 'base.html' %}<!--permet de créer une structure de page cohérente pour l'ensemble du site tout en permettant des variations de contenu spécifique à chaque page. Le contenu spécifique à chaque page est défini dans des blocs qui remplacent les blocs correspondants du modèle de base.-->
+
+{% load static %} <!-- Charger tous les fichiers statiques dans la page -->
+
+{% block content %}
+
+
+
+
+  <!-- About -->
+
+  <!-- /Hero -->
+
+  <section class="hero" style="min-height: 600px; background-image: url('{% static 'img/cover.jpg' %}'); background-size: cover; background-position: center;">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-12">
+          <a class="hero-brand" href="index.html" title="Home"></a>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <h1>SOCIETE GENERAL</h1>
+        <p class="tagline">Trasferite denaro in pochi minuti e risparmiate per il vostro futuro. Tutti i servizi desiderati su un'unica piattaforma.</p>
+        <a class="btn btn-full" href="{% url 'register' %}">Iniziare ora</a> Or <a class="btn btn-full" href="{% url 'login' %}">Connettore Se</a>
+      </div>
+    </div>
+</section>
+<style>
+  /* styles.css */
+
+/* Styles pour la section hero */
+.hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff; /* Couleur du texte */
+    padding-top: 100px; /* Espacement en haut */
+    padding-bottom: 100px; /* Espacement en bas */
+}
+
+/* Styles pour le titre */
+.hero h1 {
+    font-size: 48px; /* Taille de la police */
+    margin-bottom: 20px; /* Espacement en bas */
+}
+
+/* Styles pour le texte */
+.hero p {
+    font-size: 18px; /* Taille de la police */
+    margin-bottom: 30px; /* Espacement en bas */
+}
+
+/* Styles pour les boutons */
+.hero .btn {
+    font-size: 18px; /* Taille de la police */
+    border-radius: 50px; /* Bordure arrondie */
+    padding: 10px 30px; /* Espacement intérieur */
+    margin-right: 10px; /* Marge entre les boutons */
+    color: #fff; /* Couleur du texte */
+    background-color: #007bff; /* Couleur de fond */
+    border-color: #007bff; /* Couleur de la bordure */
+}
+
+/* Styles pour les boutons au survol */
+.hero .btn:hover {
+    color: #fff; /* Couleur du texte au survol */
+    background-color: #0056b3; /* Couleur de fond au survol */
+    border-color: #0056b3; /* Couleur de la bordure au survol */
+}
+
+</style>
+
+  <!-- About -->
+
+  <section class="about" id="about">
+    <div class="container ">
+      <h2>
+        Informazioni su Bell SOCIETA' GENERALE
+        </h2>
+
+      <p>
+        In SOCIETE GENERAL il nostro team è la spina dorsale del nostro successo. Siamo orgogliosi di presentarvi i professionisti che lavorano instancabilmente per offrirvi la migliore esperienza bancaria possibile.
+      </p>
+
+      <div class="row stats-row">
+        <div class="stats-col text-center col-md-3 col-sm-6">
+          <div class="circle">
+            <span class="stats-no" data-toggle="counter-up">232</span> Clienti soddisfatti
+          </div>
+        </div>
+
+        <div class="stats-col text-center col-md-3 col-sm-6">
+          <div class="circle">
+            <span class="stats-no" data-toggle="counter-up">79</span> Progetti rilasciati
+          </div>
+        </div>
+
+        <div class="stats-col text-center col-md-3 col-sm-6">
+          <div class="circle">
+            <span class="stats-no" data-toggle="counter-up">1,463</span> Orari di assistenza
+          </div>
+        </div>
+
+        <div class="stats-col text-center col-md-3 col-sm-6">
+          <div class="circle">
+            <span class="stats-no" data-toggle="counter-up">15</span> Lavoratori indefessi
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    
+  </style>
+  <!-- /About -->
+
+
+  <!-- Portfolio -->
+
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="text-center">
+        <h2>Benvenuti in un Online Banking perfetto</h2>
+        <p>Questo è il tema più potente con migliaia di opzioni mai viste prima.</p>
+        <h3>Risolviamo i vostri problemi finanziari</h3>
+        <p>Il nostro team è composto da persone con background e competenze diverse e con l'impegno comune di soddisfare le vostre esigenze finanziarie. Ogni membro del nostro team porta con sé un patrimonio di esperienza e conoscenza.</p>
+      </div>
+  
+      <div class="row mt-5">
+        <div class="col-md-4">
+          <h4>Come funziona</h4>
+          <p>Tutto ciò che dovete fare è creare il vostro account e accedere. Il nostro agente si occupa di tutto il resto.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Chi siamo</h4>
+          <p>In SOCIETE GENERAL siamo più di una semplice istituzione finanziaria. Siamo il vostro partner di fiducia per soddisfare le vostre esigenze finanziarie e per sostenervi in tutto il vostro percorso finanziario.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Il nostro impegno</h4>
+          <p>Fondata [numero di] anni fa, SOCIETE GENERAL è diventata uno dei principali attori del settore finanziario, fornendo soluzioni finanziarie all'avanguardia a milioni di clienti in tutto il mondo.</p>
+        </div>
+      </div>
+  
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <p>Crediamo fermamente che ogni cliente meriti un'esperienza bancaria eccezionale. Per questo motivo ci impegniamo costantemente a superare i limiti dell'innovazione tecnologica per offrire un servizio bancario online di prim'ordine. La nostra piattaforma di facile utilizzo vi permette di accedere ai vostri conti, gestire le vostre transazioni e prendere il controllo delle vostre finanze, il tutto comodamente da casa o in viaggio.</p>
+          <p>In qualità di istituto finanziario responsabile, prestiamo grande attenzione alla sicurezza dei vostri dati e delle vostre transazioni. Le vostre informazioni personali sono trattate con la massima riservatezza e utilizziamo le più recenti tecnologie di sicurezza per proteggere i vostri conti.</p>
+          <p>In SOCIETE GENERAL siamo orgogliosi del nostro patrimonio e del nostro impegno per il futuro. Ci sforziamo costantemente di innovare e migliorare i nostri servizi per soddisfare al meglio le vostre esigenze finanziarie. Siamo qui per aiutarvi a raggiungere i vostri obiettivi finanziari, che si tratti di acquistare una casa, costruire un'attività di successo o prepararvi per il vostro futuro finanziario. Unitevi a noi in questo emozionante viaggio finanziario e scoprite la differenza che SOCIETE GENERAL può fare nella vostra vita. Siamo qui per voi in ogni momento del vostro viaggio finanziario.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    /* styles.css */
+
+/* Styles pour la section About */
+.about {
+    padding: 100px 0; /* Espacement intérieur en haut et en bas */
+    background-color: #f8f9fa; /* Couleur de fond */
+}
+
+.about h2 {
+    font-size: 36px; /* Taille de la police */
+    margin-bottom: 30px; /* Espacement en bas */
+    text-align: center; /* Alignement du texte */
+}
+
+.about p {
+    font-size: 18px; /* Taille de la police */
+    line-height: 1.6; /* Hauteur de ligne */
+    margin-bottom: 30px; /* Espacement en bas */
+    text-align: center; /* Alignement du texte */
+}
+
+.stats-row {
+    margin-top: 50px; /* Marge supérieure */
+}
+
+.stats-col {
+    margin-bottom: 30px; /* Espacement en bas */
+}
+
+.circle {
+    position: relative;
+    width: 150px; /* Largeur du cercle */
+    height: 150px; /* Hauteur du cercle */
+    border-radius: 50%; /* Bordure arrondie pour former un cercle */
+    background-color: #007bff; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    display: flex; /* Utilisation de flexbox pour centrer le contenu */
+    justify-content: center; /* Alignement horizontal du contenu */
+    align-items: center; /* Alignement vertical du contenu */
+    text-align: center; /* Alignement du texte */
+}
+
+.stats-no {
+    font-size: 36px; /* Taille de la police */
+}
+
+.circle:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+}
+
+/* Styles pour la section Call to Action */
+.cta {
+    padding: 100px 0; /* Espacement intérieur en haut et en bas */
+    background-color: #007bff; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+}
+
+.cta h2 {
+    font-size: 36px; /* Taille de la police */
+    margin-bottom: 30px; /* Espacement en bas */
+    text-align: center; /* Alignement du texte */
+}
+
+.cta p {
+    font-size: 18px; /* Taille de la police */
+    margin-bottom: 30px; /* Espacement en bas */
+    text-align: center; /* Alignement du texte */
+}
+
+/* Styles pour les boutons de Call to Action */
+.cta .btn {
+    font-size: 18px; /* Taille de la police */
+    border-radius: 50px; /* Bordure arrondie */
+    padding: 10px 30px; /* Espacement intérieur */
+    margin-right: 10px; /* Marge entre les boutons */
+    color: #007bff; /* Couleur du texte */
+    background-color: #fff; /* Couleur de fond */
+    border-color: #fff; /* Couleur de la bordure */
+}
+
+.cta .btn:hover {
+    color: #fff; /* Couleur du texte au survol */
+    background-color: #0056b3; /* Couleur de fond au survol */
+    border-color: #0056b3; /* Couleur de la bordure au survol */
+}
+
+/* Styles pour la section Portfolio */
+.portfolio {
+    padding: 100px 0; /* Espacement intérieur en haut et en bas */
+    background-color: #f8f9fa; /* Couleur de fond */
+    color: #000; /* Couleur du texte */
+}
+
+.portfolio h2 {
+    font-size: 36px; /* Taille de la police */
+    margin-bottom: 30px; /* Espacement en bas */
+    text-align: center; /* Alignement du texte */
+}
+
+.portfolio p {
+    font-size: 18px; /* Taille de la police */
+    margin-bottom: 30px; /* Espacement en bas */
+    text-align: center; /* Alignement du texte */
+}
+
+.portfolio .col-md-4 {
+    margin-bottom: 30px; /* Espacement en bas */
+}
+
+  </style>
+  
+  <!-- /Portfolio -->
+  <!-- Team -->
+
+
+
+  <section class="site-section border-bottom bg-light" id="team">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center" data-aos="fade">
+          <h2 class="section-title mb-3">I nostri servizi</h2>
+        </div>
+      </div>
+  
+      <div class="row align-items-stretch">
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+          <div class="unit-4">
+            <div class="unit-4-icon">
+              <img src="{% static 'img/001-wallet.svg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+            </div>
+            <div>
+              <h3>Trasferimento di denaro</h3>
+              <p>Il nostro servizio di trasferimento di denaro vi offre una soluzione veloce, sicura e conveniente per inviare e ricevere denaro, sia a livello nazionale che internazionale. Siamo consapevoli dell'importanza della flessibilità e della facilità di accesso ai vostri fondi, per questo abbiamo creato un servizio di trasferimento di denaro affidabile per soddisfare le vostre esigenze finanziarie. Con il nostro servizio di trasferimento di denaro, potete inviare fondi ad amici, familiari, colleghi o partner commerciali in pochi semplici passi. La nostra piattaforma di facile utilizzo vi permette di scegliere tra una serie di metodi di trasferimento, tra cui bonifici, trasferimenti online e altro ancora. Potete anche selezionare la valuta di vostra scelta per la transazione. Uno dei principali vantaggi del nostro servizio è la velocità di elaborazione del trasferimento. Potete aspettarvi che il denaro venga trasferito in modo sicuro al destinatario in tempi record, il che è particolarmente importante in situazioni di emergenza. Inoltre, le nostre commissioni di trasferimento sono competitive e vi permettono di risparmiare sui costi di trasferimento. La sicurezza delle vostre transazioni è la nostra massima priorità. Utilizziamo misure di sicurezza avanzate per proteggere le vostre informazioni finanziarie sensibili, assicurando che i vostri trasferimenti di denaro siano sempre effettuati in modo sicuro. Che dobbiate mantenere la vostra famiglia all'estero, pagare le bollette o effettuare transazioni commerciali internazionali, il nostro servizio di trasferimento di denaro vi offre la tranquillità e la semplicità di cui avete bisogno.</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+          <div class="unit-4">
+            <div class="unit-4-icon">
+              <img src="{% static 'img/003-notes.svg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+            </div>
+            <div>
+              <h3>Multi valuta</h3>
+              <p>Il nostro servizio Multi Currency è stato progettato appositamente per semplificare le vostre transazioni finanziarie internazionali e permettervi di gestire facilmente conti in valute diverse. Noi di [Online Banking Name] siamo consapevoli che le esigenze finanziarie non si limitano a una sola valuta, ed è per questo che offriamo una soluzione versatile per soddisfare le vostre necessità. Con il nostro servizio Multi Currency, potete mantenere conti in diverse valute, rendendo più facile la gestione delle vostre finanze quando viaggiate all'estero, fate trading internazionale o diversificate il vostro patrimonio. Potete anche effettuare facilmente trasferimenti tra i vostri conti in valute diverse. Uno dei principali vantaggi del nostro servizio Multi Currency è la possibilità di sfruttare i tassi di cambio favorevoli per risparmiare sulle conversioni di valuta. Inoltre, avete la possibilità di scegliere tra una serie di valute comuni per i vostri conti, consentendovi di gestire meglio i rischi valutari. La nostra piattaforma online di facile utilizzo vi permette di monitorare in tempo reale i saldi dei vostri conti in diverse valute, di gestire le vostre transazioni e di ricevere estratti conto dettagliati per ogni valuta. Inoltre, il nostro team di assistenza è sempre disponibile per rispondere alle vostre domande e fornirvi un supporto personalizzato. Semplificate la gestione delle vostre finanze internazionali.</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+          <div class="unit-4">
+            <div class="unit-4-icon">
+              <img src="{% static 'img/006-credit-card.svg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+            </div>
+            <div>
+              <h3>Valuta di scambio</h3>
+              <p>Il nostro servizio di cambio valuta è stato progettato per semplificare le vostre esigenze di cambio, sia per i viaggi, sia per gli affari internazionali o per diversificare il vostro portafoglio di investimenti. Noi di [Online Banking Name] comprendiamo l'importanza di un accesso rapido e conveniente alla valuta estera, ed è per questo che offriamo una soluzione efficiente e trasparente. Con il nostro servizio di cambio valuta online, potete acquistare o vendere valute estere con facilità, 24 ore al giorno, 7 giorni alla settimana. Offriamo tassi di cambio competitivi e in tempo reale per assicurarvi il miglior valore per il vostro denaro. Che siate viaggiatori abituali, trader internazionali o investitori che desiderano diversificare il proprio patrimonio, la nostra piattaforma di facile utilizzo vi consentirà di effettuare transazioni in pochi clic. È inoltre possibile visualizzare le tendenze dei tassi di cambio e accedere a informazioni aggiornate sui mercati finanziari per prendere decisioni informate. La sicurezza delle vostre operazioni di cambio è per noi una priorità assoluta. Utilizziamo protocolli di sicurezza avanzati per garantire la riservatezza delle vostre informazioni e la sicurezza dei vostri fondi.</p>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+          <div class="unit-4">
+            <div class="unit-4-icon">
+              <img src="{% static 'img/002-rich.svg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+            </div>
+            <div>
+              <h3>Deposito fisso</h3>
+              <p>I nostri piani di deposito fisso sono progettati per aiutarvi a far crescere i vostri risparmi in modo sicuro e redditizio. Noi di E-fortuneguard comprendiamo l'importanza di far lavorare il vostro denaro per voi, ed è per questo che offriamo una gamma di Piani di Deposito Fisso flessibili e convenienti. Con tassi d'interesse competitivi e una varietà di condizioni di deposito, i nostri piani di deposito a termine sono adatti ai vostri obiettivi finanziari a breve e lungo termine. Che vogliate risparmiare per un acquisto importante, pianificare la pensione o semplicemente ottenere un rendimento costante sui vostri risparmi, abbiamo la soluzione che fa per voi. Potete scegliere tra una serie di termini di deposito, da pochi mesi a diversi anni, a seconda delle vostre esigenze. Inoltre, la nostra procedura di richiesta online è semplice e trasparente e vi consente di iniziare a investire rapidamente. Offriamo anche opzioni di reinvestimento automatico per massimizzare i vostri rendimenti. Il vostro denaro è in mani sicure.</p>
+            </div>
+          </div>
+        </div>
+  
+  
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+          <div class="unit-4">
+            <div class="unit-4-icon">
+              <img src="{% static 'img/007-piggy-bank.svg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+            </div>
+            <div>
+              <h3>Investimento finanziario</h3>
+              <p>Il nostro servizio di richiesta di prestito è pensato per offrirvi una soluzione rapida e semplice alle vostre esigenze di finanziamento. Siamo consapevoli che i progetti personali e professionali a volte richiedono un ulteriore sostegno finanziario, ed è per questo che abbiamo messo a punto un processo di richiesta di prestito efficiente e trasparente. Che vogliate finanziare l'istruzione, l'acquisto di una nuova casa, l'avvio di un'attività o qualsiasi altro progetto importante, il nostro servizio di richiesta di prestito vi consente di presentare domanda online in pochi semplici passaggi. Potete accedere alla nostra piattaforma 24 ore su 24, 7 giorni su 7, comodamente da casa vostra o dal vostro ufficio. Offriamo una varietà di prestiti, tra cui prestiti personali, prestiti per la casa, prestiti per l'auto, prestiti per le imprese e altro ancora. I nostri tassi di interesse sono competitivi e offriamo termini di rimborso flessibili per adattarsi al vostro budget. Quando richiedete un prestito, il nostro team di esperti esaminerà rapidamente la vostra pratica e vi fornirà una decisione nel più breve tempo possibile. Ci impegniamo ad aiutarvi a realizzare i vostri progetti fornendovi un sostegno finanziario affidabile e trasparente. La nostra procedura di richiesta online è sicura, riservata e senza problemi. Potete seguire lo stato della vostra domanda in tempo reale e caricare i documenti necessari direttamente sulla nostra piattaforma. Non aspettate oltre per realizzare i vostri progetti, richiedete un prestito oggi stesso.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- /Team -->
+  <!-- @component: footer -->
+
+
+
+
+{% endblock %}

@@ -1,0 +1,65 @@
+/* Styles for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Position relative pour permettre le positionnement absolu de close */
+}
+
+/* Style for the close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Style for the code input container */
+#codeInputContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Style for the individual code inputs */
+.code-input {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style for the submit button */
+#submitCodeButton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Styles for responsiveness */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%; /* Ajustez la largeur selon vos besoins */
+    }
+}

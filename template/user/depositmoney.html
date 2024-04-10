@@ -1,0 +1,506 @@
+{% load static %}
+<html style="" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><head>
+    <meta charset="utf-8">
+    <title>SOCIETE GENERAL </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="csrf-token" content="YOb3IIEFQp4zSINpQsPEsMzzgNZYU7WCduws8tFh">
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <!-- DataTables -->
+    <link href="{% static '/public/backend/plugins/datatable/datatables.min.css' %}" rel="stylesheet" type="text/css">
+
+    <link href="{% static 'css3/dropify.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css3/sweetalert2.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css3/animate.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css3/select2.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css3/daterangepicker.css' %}" rel="stylesheet">
+    <link href="{% static 'css3/jquery.toast.min.css' %}" rel="stylesheet">
+
+    <!-- App Css -->
+    <link rel="stylesheet" href="{% static 'css3/icofont.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css3/styles.css' %}">
+    <!-- Modernizr -->
+    <script src="https://livo-bank.trickycode.xyz/public/backend/assets/js/modernizr-2.8.3.min.js"></script>
+
+
+
+</head>
+
+<body class="sb-nav-fixed  pace-done"><div class="pace  pace-inactive"><div class="pace-progress" style="transform: translate3d(100%, 0px, 0px);" data-progress-text="100%" data-progress="99">
+<div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+    <!-- Main Modal -->
+    <div id="main_modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title mt-0 ml-2"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="alert alert-danger d-none mx-3 mt-3 mb-0"></div>
+                <div class="alert alert-primary d-none mx-3 mt-3 mb-0"></div>
+                <div class="modal-body overflow-hidden"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Secondary Modal -->
+    <div id="secondary_modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title mt-0 ml-2"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="alert alert-danger d-none mx-3 mt-3 mb-0"></div>
+                <div class="alert alert-primary d-none mx-3 mt-3 mb-0"></div>
+                <div class="modal-body overflow-hidden"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preloader area start -->
+    
+    <!-- Preloader area end -->
+
+    <!--Header Nav-->
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-md-center" href="https://livo-bank.trickycode.xyz/dashboard">SOCIETE GENERAL</a>
+            <button class="btn btn-link btn-sm mr-auto" id="sidebarToggle" href="#">
+                <div class="lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+
+           <!-- <ul class="navbar-nav ml-auto ml-md-0 notification-area">
+                <li class="nav-item dropdown animate-dropdown">
+                    <i class="icofont-notification dropdown-toggle" data-toggle="dropdown">
+                                                                                    <span id="notification-count">32</span>
+                                                </i>
+                    <div class="dropdown-menu dropdown-menu-right bell-notify-box notify-box">
+                                                    <span class="notify-title">You have 32 new notifications</span>
+                                                    <div class="nofity-list">
+                                                                                                                                <div class="d-flex notify-item">
+                                    <a href="https://livo-bank.trickycode.xyz/profile/show_notification/8fc5fe07-8667-482b-ae10-602092f62721" class="ajax-modal" data-title="Notification">
+                                        <div class="notify-text">
+                                            <p class="unread-notification">Dear Sir, Your wire transfer request has been approved. Your account has been debited by $147.46 on 25/09/2023 05:36</p>
+                                            <span>11 hours ago</span>
+                                        </div>
+                                    </a>
+
+                                                                            <a href="https://livo-bank.trickycode.xyz/profile/notification_mark_as_read/8fc5fe07-8667-482b-ae10-602092f62721" class="notification_mark_as_read"><i class="icofont-checked"></i></a>
+                                                                        </div>
+                                                                <div class="d-flex notify-item">
+                                    <a href="https://livo-bank.trickycode.xyz/profile/show_notification/f911da43-3320-4c5d-b6af-89a6fb2e7a35" class="ajax-modal" data-title="Notification">
+                                        <div class="notify-text">
+                                            <p class="unread-notification">Dear Sir, Your wire transfer request has been approved. Your account has been debited by $10,100.00 on 17/09/2023 02:25</p>
+                                            <span>22 hours ago</span>
+                                        </div>
+                                    </a>
+
+                                                                            <a href="https://livo-bank.trickycode.xyz/profile/notification_mark_as_read/f911da43-3320-4c5d-b6af-89a6fb2e7a35" class="notification_mark_as_read"><i class="icofont-checked"></i></a>
+                                                                        </div>
+                                                                <div class="d-flex notify-item">
+                                    <a href="https://livo-bank.trickycode.xyz/profile/show_notification/42a3f56f-3871-4831-b530-4dc1c3ca3698" class="ajax-modal" data-title="Notification">
+                                        <div class="notify-text">
+                                            <p class="unread-notification">Dear Sir, Your wire transfer request has been approved. Your account has been debited by $909.00 on 24/09/2023 15:32</p>
+                                            <span>23 hours ago</span>
+                                        </div>
+                                    </a>
+
+                                                                            <a href="https://livo-bank.trickycode.xyz/profile/notification_mark_as_read/42a3f56f-3871-4831-b530-4dc1c3ca3698" class="notification_mark_as_read"><i class="icofont-checked"></i></a>
+                                                                        </div>
+                                                                <div class="d-flex notify-item">
+                                    <a href="https://livo-bank.trickycode.xyz/profile/show_notification/8a4f0637-873d-4ddc-94a5-5d0c83cff53b" class="ajax-modal" data-title="Notification">
+                                        <div class="notify-text">
+                                            <p class="unread-notification">Dear Sir, Your account has been credited by €378,000.00 on 19/09/2023 00:00</p>
+                                            <span>5 days ago</span>
+                                        </div>
+                                    </a>
+
+                                                                            <a href="https://livo-bank.trickycode.xyz/profile/notification_mark_as_read/8a4f0637-873d-4ddc-94a5-5d0c83cff53b" class="notification_mark_as_read"><i class="icofont-checked"></i></a>
+                                                                        </div>
+                                                                <div class="d-flex notify-item">
+                                    <a href="https://livo-bank.trickycode.xyz/profile/show_notification/6e32ebcd-3c3d-436f-91f7-219f5c572f72" class="ajax-modal" data-title="Notification">
+                                        <div class="notify-text">
+                                            <p class="unread-notification">Dear Sir, Your account has been debited by $239,000.00 on 19/09/2023 00:00</p>
+                                            <span>5 days ago</span>
+                                        </div>
+                                    </a>
+
+                                                                            <a href="https://livo-bank.trickycode.xyz/profile/notification_mark_as_read/6e32ebcd-3c3d-436f-91f7-219f5c572f72" class="notification_mark_as_read"><i class="icofont-checked"></i></a>
+                                                                        </div>
+                                                                <div class="d-flex notify-item">
+                                    <a href="https://livo-bank.trickycode.xyz/profile/show_notification/4f1f2838-136c-4e5a-969b-b6353d816bbc" class="ajax-modal" data-title="Notification">
+                                        <div class="notify-text">
+                                            <p class="unread-notification">Dear Sir, Your account has been debited by €10,000.00 on 19/09/2023 00:00</p>
+                                            <span>5 days ago</span>
+                                        </div>
+                                    </a>
+
+                                                                            <a href="https://livo-bank.trickycode.xyz/profile/notification_mark_as_read/4f1f2838-136c-4e5a-969b-b6353d816bbc" class="notification_mark_as_read"><i class="icofont-checked"></i></a>
+                                                                        </div>
+                                                                <div class="d-flex notify-item">
+                                    <a href="https://livo-bank.trickycode.xyz/profile/show_notification/fd2fa255-1c4b-4117-bbd8-67510c3ddf7c" class="ajax-modal" data-title="Notification">
+                                        <div class="notify-text">
+                                            <p class="">Dear Sir, Your account has been credited by ₹10,000,000.00 on 12/09/2023 21:01</p>
+                                            <span>1 week ago</span>
+                                        </div>
+                                    </a>
+
+                                                                        </div>
+                                                                <div class="d-flex notify-item">
+                                    <a href="https://livo-bank.trickycode.xyz/profile/show_notification/e3df8e8f-a880-4e1c-88f8-e26fcb536498" class="ajax-modal" data-title="Notification">
+                                        <div class="notify-text">
+                                            <p class="">Dear Sir, Your account has been credited by $1,000,000,000.00 on 10/09/2023 16:11</p>
+                                            <span>2 weeks ago</span>
+                                        </div>
+                                    </a>
+
+                                                                        </div>
+                                                                <div class="d-flex notify-item">
+                                    <a href="https://livo-bank.trickycode.xyz/profile/show_notification/67e77739-20f6-4899-b699-0456bddf5d57" class="ajax-modal" data-title="Notification">
+                                        <div class="notify-text">
+                                            <p class="unread-notification">Dear Sir, Your account has been credited by ₹500,000,000.00 on 10/09/2023 15:12</p>
+                                            <span>2 weeks ago</span>
+                                        </div>
+                                    </a>
+
+                                                                            <a href="https://livo-bank.trickycode.xyz/profile/notification_mark_as_read/67e77739-20f6-4899-b699-0456bddf5d57" class="notification_mark_as_read"><i class="icofont-checked"></i></a>
+                                                                        </div>
+                                                                <div class="d-flex notify-item">
+                                    <a href="https://livo-bank.trickycode.xyz/profile/show_notification/97516e31-84eb-40dd-898c-1c786d8707ac" class="ajax-modal" data-title="Notification">
+                                        <div class="notify-text">
+                                            <p class="">Dear Sir, Your account has been credited by ₹50,000.00 on 10/09/2023 15:10</p>
+                                            <span>2 weeks ago</span>
+                                        </div>
+                                    </a>
+
+                                                                        </div>
+                                                                <div class="d-flex notify-item">
+                                    <a href="https://livo-bank.trickycode.xyz/profile/show_notification/7d0fa260-d247-48f0-99f5-0ffdc0d3ef14" class="ajax-modal" data-title="Notification">
+                                        <div class="notify-text">
+                                            <p class="">Dear Sir, Your wire transfer request has been approved. Your account has been debited by $1,010.00 on 29/08/2023 08:25</p>
+                                            <span>3 weeks ago</span>
+                                        </div>
+                                    </a>
+
+                                                                        </div>
+                                                                <div class="d-flex notify-item">
+                                    <a href="https://livo-bank.trickycode.xyz/profile/show_notification/87476dac-5094-4119-b45d-93975c6f934b" class="ajax-modal" data-title="Notification">
+                                        <div class="notify-text">
+                                            <p class="">Dear Sir, Your account has been credited by $56.00 on 30/08/2023 01:28</p>
+                                            <span>3 weeks ago</span>
+                                        </div>
+                                    </a>
+
+                                                                        </div>
+                                                                <div class="d-flex notify-item">
+                                    <a href="https://livo-bank.trickycode.xyz/profile/show_notification/40f62b32-221b-4333-ab01-48ec1e82468f" class="ajax-modal" data-title="Notification">
+                                        <div class="notify-text">
+                                            <p class="">Dear Sir, Your wire transfer request has been approved. Your account has been debited by $4,545.00 on 27/08/2023 04:55</p>
+                                            <span>4 weeks ago</span>
+                                        </div>
+                                    </a>
+
+                                                                        </div>
+                                                                <div class="d-flex notify-item">
+                                    <a href="https://livo-bank.trickycode.xyz/profile/show_notification/22e04502-2e0f-4af1-8a52-2978083eda8e" class="ajax-modal" data-title="Notification">
+                                        <div class="notify-text">
+                                            <p class="">Dear Sir, Your wire transfer request has been approved. Your account has been debited by €8,585.00 on 23/08/2023 16:59</p>
+                                            <span>1 month ago</span>
+                                        </div>
+                                    </a>
+
+                                                                        </div>
+                                                                <div class="d-flex notify-item">
+                                    <a href="https://livo-bank.trickycode.xyz/profile/show_notification/46daff1a-0f15-4875-b6cb-95ea8198b2f0" class="ajax-modal" data-title="Notification">
+                                        <div class="notify-text">
+                                            <p class="">Dear Sir, Your wire transfer request has been approved. Your account has been debited by €6,060.00 on 22/08/2023 14:26</p>
+                                            <span>1 month ago</span>
+                                        </div>
+                                    </a>
+
+                                                                        </div>
+                                                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto ml-md-0">
+                <li class="nav-item dropdown animate-dropdown">
+                    <a class="nav-link dropdown-toggle" id="languageSelector" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icofont-world"></i> English</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageSelector">
+                                                        <a class="dropdown-item" href="https://livo-bank.trickycode.xyz?language=English">English</a>
+                                                        <a class="dropdown-item" href="https://livo-bank.trickycode.xyz?language=Spanish">Spanish</a>
+                                                </div>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto ml-md-0">
+                <li class="nav-item dropdown animate-dropdown">
+                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icofont-ui-user"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="https://livo-bank.trickycode.xyz/profile"><i class="icofont-ui-user"></i> Profile Overview</a>
+                        <a class="dropdown-item" href="https://livo-bank.trickycode.xyz/profile/edit"><i class="icofont-ui-edit"></i> Profile Settings</a>
+                        <a class="dropdown-item" href="https://livo-bank.trickycode.xyz/profile/change_password"><i class="icofont-exchange"></i> Change Password</a>
+                                                    <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="https://livo-bank.trickycode.xyz/logout"><i class="icofont-exit"></i> Logout</a>
+                    </div>
+                </li>
+            </ul>
+
+        </div>-->
+    </nav><!--End Header Nav-->
+
+    <div id="layoutSidenav" class="container-fluid d-flex align-items-stretch">
+        <div id="layoutSidenav_nav">
+            <span class="close-mobile-nav"><i class="icofont-close-line-squared-alt"></i></span>
+            <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
+
+                <div class="sidebar-user">
+                    
+                    <img src="  {% static 'images/avatar.png' %} " alt="user-image" class="rounded-circle shadow-sm" height="42">
+                    
+                
+                <p>Benvenuti,  {{user.nom }} {{user.prenom}}</p>
+            </div>
+
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">NAVIGAZIONI</div>
+                        <a class="nav-link" href="{% url 'userdash' %}">
+                            <div class="sb-nav-link-icon"></div>
+                            Cruscotto
+                            </a>
+                            
+                            <a class="nav-link" href="{% url 'send' %}">
+                            <div class="sb-nav-link-icon"></div>
+                            Inviare denaro
+                            </a>
+                            
+                            <a class="nav-link" href="{% url 'exchange' %}">
+                            <div class="sb-nav-link-icon"></i></div>
+                            Scambio di denaro
+                            </a>
+                            
+                            <a class="nav-link" href="{% url 'wire' %}">
+                            <div class="sb-nav-link-icon"></i></div>
+                            Bonifico bancario
+                            </a>
+                            
+                            <a class="nav-link" href="{% url 'paye' %}">
+								<div class="sb-nav-link-icon"></i></div>
+								Richiesta di pagamento
+								<div class="sb-sidenav-collapse-arrow"><i class="icofont-rounded-down"></i></div>
+								</a>
+								
+								<a class="nav-link" href="{% url 'deposit' %}">
+							
+								<div class="sb-nav-link-icon"></i></div>
+								Deposito di denaro
+								<div class="sb-sidenav-collapse-arrow"></i></div>
+								</a>
+                            
+                            <a class="nav-link" href="{% url 'withdraw' %}">
+                            <div class="sb-nav-link-icon"></div>
+                            Prelievo di denaro
+                            </a>
+                             <br>
+                            <a href="index.html"><div class="sb-sidenav-menu-heading">Disconnessione</div></a>
+
+
+<div class="collapse" id="loans" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+
+</div>
+
+
+<div class="collapse" id="fdr" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+
+</div>
+
+
+<div class="collapse" id="dps" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+
+</div>
+
+
+<div class="collapse" id="tickets" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+
+</div>
+
+
+                    </div>
+                </div>
+            </nav>
+        </div><!--End layoutSidenav_nav-->
+
+        <div id="layoutSidenav_content">
+
+            <main>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="alert alert-success alert-dismissible" id="main_alert" role="alert">
+                            <button type="button" id="close_alert" class="close">
+                                <span aria-hidden="true"><i class="icofont-close-line-squared-alt"></i></span>
+                            </button>
+                            <span class="msg"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="header-title text-center">Metodi di deposito manuali</h4>
+        </div>
+        <div class="card-body">
+            <div class="row justify-content-md-center">
+                                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <img src="https://livo-bank.trickycode.xyz/public/uploads/media/1628490424570667.png" class="gateway-img">
+                            <h5>Bonifico bancario</h5>
+                            <h6 class="pt-1">Limite di deposito ($50,00 - $1.000.000,00)</h6>
+                            <h6 class="pt-1">Commissione di deposito ($0,00 + 1,00%)</h6>
+                            <button data-href="https://livo-bank.trickycode.xyz/deposit/manual_deposit/1" data-title="Deposit Via Bank Transfer" class="btn btn-light mt-3 stretched-link ajax-modal">Deposit Now</button>
+                            
+                        </div>
+                    </div>
+                </div>
+                                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <img src="https://livo-bank.trickycode.xyz/public/uploads/media/1629466555bkash_logo_0.jpg" class="gateway-img">
+                            <h5>Bkash</h5>
+                            <h6 class="pt-1">Limite di deposito ($20,00 - $1.000.000,00)</h6>
+                            <h6 class="pt-1">Commissione di deposito ($0,00 + 2,00%)</h6>
+                            <button data-href="https://livo-bank.trickycode.xyz/deposit/manual_deposit/2" data-title="Deposit Via Bkash" class="btn btn-light mt-3 stretched-link ajax-modal">Deposit Now</button>
+                        </div>
+                    </div>
+                </div>
+                <center><p>Sarà possibile effettuare depositi sul conto solo dopo la sua attivazione. Contattate un membro per ottenere un codice di attivazione.</p></center>
+                            </div>
+        </div>
+    </div>
+</div>
+</div>
+            </main>
+
+        </div>	<!--End layoutSidenav_content-->
+    </div> <!--End layoutSidenav-->
+    <div class="message-overlay" id="messageOverlay">
+        <div class="message-box">
+            <h2>Message</h2>
+            <p>Votre dépôt a été effectué avec succès !</p>
+            <button id="closeMessage">Fermer</button>
+        </div>
+    </div>
+    <Style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+.message-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.message-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#closeMessage {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+    </Style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const depositBtn = document.getElementById("depositBtn");
+    const messageOverlay = document.getElementById("messageOverlay");
+    const closeMessage = document.getElementById("closeMessage");
+
+    depositBtn.addEventListener("click", function () {
+        // Afficher le message
+        messageOverlay.style.display = "flex";
+    });
+
+    closeMessage.addEventListener("click", function () {
+        // Cacher le message lorsque l'utilisateur clique sur "Fermer"
+        messageOverlay.style.display = "none";
+    });
+});
+
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Récupérer le nom d'utilisateur depuis la session
+            const username = sessionStorage.getItem("username");
+            if (username) {
+                // Afficher le nom d'utilisateur dans l'élément avec l'id "user"
+                document.getElementById("user").textContent = username;
+            }
+        });
+    </script>
+    
+    <script src="{% static 'ttt/bootstrap.js' %}"></script>
+    <script src="{% static 'ttt/bootstrap.min.js' %}"></script>
+    <script src="{% static 'ttt/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'ttt/jquery.easing.js' %}"></script>
+    <script src="{% static 'ttt/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'ttt/jquery.js' %}"></script>
+    <script src="{% static 'ttt/popper.js' %}"></script>
+    <script src="{% static 'ttt/popper.js' %}"></script>
+    <script src="{% static 'ttt/slick.min.js' %}"></script>
+  
+    <script src="{% static 'jss/app.js' %}"></script>
+      <script src="{% static 'jss/script.js' %}"></script>
+      <script src="{% static 'jss/webpack.mix.js' %}"></script>
+  
+    <script src="{% static 'jsft/clipboard.min.js' %}"></script>
+    <script src="{% static 'jsft/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'jsft/jquery.nestable.js' %}"></script>
+    <script src="{% static 'jsft/modernizr-2.8.3.min.js' %}"></script>
+    <script src="{% static 'jsft/navigation.js' %}"></script>
+    <script src="{% static 'jsft/pace.min.js' %}"></script>
+    <script src="{% static 'jsft/print.js' %}"></script>
+     <script src="{% static 'jsft/scripts.js' %}"></script>
+     <script src="{% static 'jsft/plugins.js' %}"></script>
+</body>
+</html>
